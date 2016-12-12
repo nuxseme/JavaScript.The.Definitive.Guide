@@ -1,0 +1,43 @@
+对象
+var point = {x:1,y:1};
+
+数组
+var array = [{x:1,y:1},{x:2,y:2}];
+
+函数
+
+function foo(param){ ... }
+
+var foo = function(param){ ... }
+
+所有的javaScript对象都具有方法
+var  foo = [];
+foo.push(1,2,3);
+foo.reverse();
+
+对象可以添加方法
+ point.dist = function(){ ... }
+
+point.dist();
+
+
+构造函数
+function Point(x, y)
+{
+    this.x = x;
+    this.y = y;
+    this.foo = function(){
+        return this.x + this.y;
+    }
+}
+可以通过给构造函数属性prototype对象赋值来定义方法
+Point.prototype.bar = function(){
+    return this.x * this.y;
+}
+
+实例化对象
+var point = new Point(x,y);
+
+
+定时器设置
+setTimeout(function(){ ... },int);

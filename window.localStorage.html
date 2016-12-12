@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="save();" value="click" >
+</body>
+</html>
+<script type="text/javascript">
+    window.onload = function () {
+        if(window.localStorage && localStorage.name)
+        {
+            var name = localStorage.name;
+            console.log(name);
+        }
+    }
+
+    function save() {
+        localStorage.name = 'hello';
+    }
+
+</script>
